@@ -1,14 +1,13 @@
-import Footer from '@/components/Footer'
-import Navbar from '@/components/Navbar'
-import SaleSection from '@/components/sections/SaleSection'
+
+'use client'
 import React from 'react'
+import { SaleSection } from '@/components/sections/SaleSection'
 
 const page = () => {
     return (
         <>
-            <Navbar />
+
             <SaleSection />
-            <Footer />
         </>
     )
 }

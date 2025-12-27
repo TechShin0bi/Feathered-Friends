@@ -1,71 +1,72 @@
-import React from 'react';
-import ParrotSaleItem from '../ParrotSaleItem';
-import { ParrotType } from '@/types/common';
+"use client"
+import { useState } from 'react';
+import { useCart } from '@/contexts/CartContext';
+import { ParrotSaleItem } from '../ParrotSaleItem';
 import { parrots_data } from '@/public/data/parrots';
-import PriceFilterSection from './PriceFilterSection';
-import PriceInput from './PriceInput';
-import ListRadioButtonContainer from '../PriceRange';
-import FilterRadioListItem from './FilterRadioListItem';
+import { PriceInput } from './PriceInput';
+import { PriceRange } from '../PriceRange';
 
+export const SaleSection = () => {
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
+  const { itemCount } = useCart();
 
-const SaleSection: React.FC = () => {
-    return (
-        <section className="py-12 bg-white">
-            <div className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row ">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                        {/* <div className="w-full md:w-3/4 md:pr-4 mb-8 md:mb-0"> */}
-                        {
-                            parrots_data.map((data: ParrotType) => (
-                                <ParrotSaleItem location={data.location} age={data.age} image={data.image} name={data.name} price={data.price} key={data.id} id={data.id} />
-                            ))
-                        }
-                    </div>
-                    <div className="hidden  w-full md:w-1/4 md:block">
-                        <p className='font-sans font-medium ml-3 text-2xl uppercase' >Filter</p>
-                        <PriceFilterSection >
-                            <PriceInput />
-                            <ListRadioButtonContainer
-                                label='Price Range: '>
-                                <FilterRadioListItem label='Under 10k' />
-                                <FilterRadioListItem label='10 - 19k' />
-                                <FilterRadioListItem label='20 - 150k' />
-                                <FilterRadioListItem label='151 - 900k' />
-                                <FilterRadioListItem label='more than 900k' />
-                                <button
-                                    className="hover:underline self-start en  font-sans text-gray-700 font-thin py-1 px-2"
-                                // onClick={() => { console.log("clicked") }}
-                                >
-                                    Clear
-                                </button>
-                            </ListRadioButtonContainer>
-                        </PriceFilterSection>
+  const filteredParrots = parrots_data.filter(
+    parrot => parrot.price >= priceRange[0] && parrot.price <= priceRange[1]
+  );
 
-                        <PriceFilterSection >
-                            <ListRadioButtonContainer
-                                label='Gender: '>
-                                <FilterRadioListItem label='male' />
-                                <FilterRadioListItem label='female' />
-                            </ListRadioButtonContainer>
-                        </PriceFilterSection>
+  return (
+    <section className="py-12 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-3xl font-bold text-gray-900">Available Parrots</h2>
+          <div className="flex items-center">
+            <span className="mr-2">Cart ({itemCount})</span>
+          </div>
+        </div>
 
-                        <PriceFilterSection >
-                            <ListRadioButtonContainer
-                                label='Age: '>
-                                <FilterRadioListItem label='1 day' />
-                                <FilterRadioListItem label='5 day' />
-                                <FilterRadioListItem label='2 weeks' />
-                                <FilterRadioListItem label='5 weeks' />
-                                <FilterRadioListItem label='5 months' />
-                                <FilterRadioListItem label='1 month' />
-                                <FilterRadioListItem label='8 months' />
-                            </ListRadioButtonContainer>
-                        </PriceFilterSection>
-                    </div>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="md:col-span-1">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold mb-4">Filters</h3>
+              <PriceRange
+                min={0}
+                max={5000}
+                value={priceRange}
+                onChange={setPriceRange}
+              />
+              <div className="mt-4">
+                <PriceInput
+                  label="Min Price"
+                  value={priceRange[0]}
+                  onChange={(value) => setPriceRange([value, priceRange[1]])}
+                />
+                <PriceInput
+                  label="Max Price"
+                  value={priceRange[1]}
+                  onChange={(value) => setPriceRange([priceRange[0], value])}
+                  className="mt-2"
+                />
+              </div>
             </div>
-        </section>
-    );
-};
+          </div>
 
-export default SaleSection;
+          <div className="md:col-span-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredParrots.map((parrot) => (
+                <ParrotSaleItem
+                  inStock={parrot.inStock !== undefined ? parrot.inStock : true}
+                  key={parrot.id}
+                  id={parrot.id.toString()}
+                  name={parrot.name}
+                  price={parrot.price}
+                  image={parrot.image}
+                  description={parrot.description || ''}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

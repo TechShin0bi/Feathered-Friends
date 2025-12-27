@@ -1,17 +1,14 @@
 import ClientCarouselFeedback from "@/components/ClientCarouselFeedback";
-import Footer from "@/components/Footer";
 import HeroSection from "@/components/HiroSection";
-import Navbar from "@/components/Navbar";
 import ParrotBanner from "@/components/ParrotBanner";
 import MostPopularParrots from "@/components/sections/MostPopularParrots";
-import SaleSection from "@/components/sections/SaleSection";
+import { SaleSection } from "@/components/sections/SaleSection";
 import { parrot13 } from "@/public/assets";
 import { client_feed_back } from "@/public/data/feedbacks";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
       <HeroSection />
       <MostPopularParrots />
       <ParrotBanner imageUrl={parrot13} altText="parrots" />
@@ -22,7 +19,6 @@ export default function Home() {
           <ClientCarouselFeedback items={client_feed_back} />
         </div>
       </div>
-      <Footer />
     </>
   );
 }

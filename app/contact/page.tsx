@@ -8,7 +8,6 @@ import React from 'react';
 const Page = () => {
     return (
         <>
-            <Navbar />
             <ParrotBanner imageUrl={parrot13} altText="parrots" />
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -32,7 +31,6 @@ const Page = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
     );
 };

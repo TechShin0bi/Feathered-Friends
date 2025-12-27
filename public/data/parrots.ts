@@ -1,225 +1,525 @@
 import { ParrotType } from "@/types/common";
 import { parrot10, parrot11, parrot12, parrot14, parrot16, parrot17, parrot18, parrot19, parrot20, parrot22, parrot26, parrot27, parrot30, parrot31, parrot32, parrot35, parrot40, parrot42, parrot44 } from "../assets";
 
-export const parrots_data:ParrotType[] = [
+export const parrots_data: ParrotType[] = [
   {
     "id": 1,
     "image": parrot10,
     "price": 2894,
-    "name": "Macaw Parrot",
+    "name": "Scarlet Macaw",
+    "breed": "Macaw",
+    "scientificName": "Ara macao",
+    "description": "The Scarlet Macaw is a large, colorful parrot with bright red, yellow, and blue feathers. Known for their intelligence and social nature, these birds can live up to 50 years in captivity.",
     "age": {
       "value": 18,
-      "unit": "days"
+      "unit": "months"
     },
-    "location": "USA,  California, Street: 123 Main St"
+    "gender": "Male",
+    "color": "Red, Yellow, Blue",
+    "size": "Large (81-96 cm)",
+    "weight": "900-1490g",
+    "diet": "Fruits, nuts, seeds, and berries",
+    "lifespan": "40-50 years",
+    "temperament": "Social, intelligent, playful",
+    "location": "USA, California",
+    "breeder": "Exotic Birds Paradise",
+    "inStock": true,
+    "rating": 4.8,
+    "reviews": 124,
+    "skills": ["Mimicry", "Talking", "Tricks"]
   },
   {
     "id": 2,
     "image": parrot11,
-    "price": 2293,
-    "name": "Cockatoo Parrot",
+    "price": 3299,
+    "name": "Sulphur-crested Cockatoo",
+    "breed": "Cockatoo",
+    "scientificName": "Cacatua galerita",
+    "description": "The Sulphur-crested Cockatoo is a large white parrot with a distinctive yellow crest. They are highly intelligent and require lots of mental stimulation. Known for their loud calls and ability to mimic human speech.",
     "age": {
       "value": 13,
       "unit": "months"
     },
-    "location": "Canada,  Ontario, Street: 456 Maple Ave"
+    "gender": "Female",
+    "color": "White with yellow crest",
+    "size": "45-55 cm",
+    "weight": "800-1000g",
+    "diet": "Seeds, nuts, fruits, and vegetables",
+    "lifespan": "40-70 years",
+    "temperament": "Affectionate, intelligent, demanding",
+    "location": "Canada, Ontario",
+    "breeder": "Canadian Aviary",
+    "inStock": true,
+    "rating": 4.7,
+    "reviews": 98,
+    "skills": ["Talking", "Dancing", "Tricks", "Mimicry"]
   },
   {
     "id": 3,
     "image": parrot14,
-    "price": 5406,
-    "name": "African Grey Parrot",
+    "price": 2499,
+    "name": "Congo African Grey",
+    "breed": "African Grey",
+    "scientificName": "Psittacus erithacus",
+    "description": "The African Grey Parrot is renowned for its exceptional intelligence and ability to mimic human speech with remarkable accuracy. These birds require significant mental stimulation and social interaction.",
     "age": {
-      "value": 4,
-      "unit": "weeks"
+      "value": 6,
+      "unit": "months"
     },
-    "location": "Australia,  Victoria, Street: 789 Oak Rd"
+    "gender": "Unsexed",
+    "color": "Grey with red tail",
+    "size": "33-40 cm",
+    "weight": "400-650g",
+    "diet": "Pellets, fruits, vegetables, and nuts",
+    "lifespan": "40-60 years",
+    "temperament": "Intelligent, sensitive, social",
+    "location": "USA, Florida",
+    "breeder": "Grey Haven Aviary",
+    "inStock": true,
+    "rating": 4.9,
+    "reviews": 215,
+    "skills": ["Advanced Talking", "Puzzle Solving", "Mimicry"]
   },
   {
     "id": 4,
     "image": parrot19,
-    "price": 3047,
-    "name": "Cockatoo Parrot",
+    "price": 2799,
+    "name": "Moluccan Cockatoo",
+    "breed": "Cockatoo",
+    "scientificName": "Cacatua moluccensis",
+    "description": "The Moluccan Cockatoo, also known as the Salmon-crested Cockatoo, is a stunning bird with beautiful salmon-pink feathers. They are known for their affectionate nature and strong need for attention.",
     "age": {
-      "value": 16,
-      "unit": "months"
+      "value": 2,
+      "unit": "years"
     },
-    "location": "UK,  England, Street: 101 Elm St"
+    "gender": "Male",
+    "color": "White with salmon-pink wash",
+    "size": "46-52 cm",
+    "weight": "850-1100g",
+    "diet": "High-quality pellets, fresh fruits, and vegetables",
+    "lifespan": "50-80 years",
+    "temperament": "Affectionate, demanding, loud",
+    "location": "UK, England",
+    "breeder": "Royal Aviary UK",
+    "inStock": true,
+    "rating": 4.6,
+    "reviews": 87,
+    "skills": ["Cuddling", "Talking", "Dancing"]
   },
   {
     "id": 5,
     "image": parrot10,
-    "price": 4105,
-    "name": "African Grey Parrot",
-    "age": {
-      "value": 7,
-      "unit": "weeks"
-    },
-    "location": "France,  Paris, Street: 222 Pine St"
-  },
-  {
-    "id": 6,
-    "image": parrot12,
-    "price": 5216,
-    "name": "Macaw Parrot",
-    "age": {
-      "value": 23,
-      "unit": "weeks"
-    },
-    "location": "Germany,  Bavaria, Street: 333 Cedar St"
-  },
-  {
-    "id": 7,
-    "image": parrot18,
-    "price": 4130,
-    "name": "Cockatoo Parrot",
-    "age": {
-      "value": 3,
-      "unit": "months"
-    },
-    "location": "Italy,  Lombardy, Street: 444 Birch St"
-  },
-  {
-    "id": 8,
-    "image": parrot22,
-    "price": 5071,
-    "name": "Macaw Parrot",
-    "age": {
-      "value": 6,
-      "unit": "weeks"
-    },
-    "location": "Spain,  Catalonia, Street: 555 Fir St"
-  },
-  {
-    "id": 9,
-    "image": parrot27,
-    "price": 3016,
-    "name": "Cockatoo Parrot",
-    "age": {
-      "value": 9,
-      "unit": "months"
-    },
-    "location": "Japan,  Tokyo, Street: 666 Pineapple St"
-  },
-  {
-    "id": 10,
-    "image": parrot16,
-    "price": 3713,
-    "name": "Macaw Parrot",
-    "age": {
-      "value": 22,
-      "unit": "weeks"
-    },
-    "location": "Brazil,  Sao Paulo, Street: 777 Olive St"
-  },
-  {
-    "id": 11,
-    "image": parrot17,
-    "price": 5313,
-    "name": "African Grey Parrot",
-    "age": {
-      "value": 19,
-      "unit": "days"
-    },
-    "location": "Mexico,  Mexico City, Street: 888 Walnut St"
-  },
-  {
-    "id": 12,
-    "image": parrot26,
-    "price": 5167,
-    "name": "Cockatoo Parrot",
+    "price": 2599,
+    "name": "Timneh African Grey",
+    "breed": "African Grey",
+    "scientificName": "Psittacus timneh",
+    "description": "The Timneh African Grey is slightly smaller than its Congo cousin, with a darker charcoal grey color and a maroon tail. They are known for their exceptional talking ability and intelligence.",
     "age": {
       "value": 8,
       "unit": "months"
     },
-    "location": "China,  Beijing, Street: 999 Cherry St"
+    "gender": "Female",
+    "color": "Charcoal grey with maroon tail",
+    "size": "28-33 cm",
+    "weight": "275-375g",
+    "diet": "Pellets, vegetables, fruits, and nuts",
+    "lifespan": "40-50 years",
+    "temperament": "Intelligent, social, sensitive",
+    "location": "France, Paris",
+    "breeder": "Parisian Parrot Palace",
+    "inStock": true,
+    "rating": 4.8,
+    "reviews": 142,
+    "skills": ["Talking", "Problem Solving", "Mimicry"]
+  },
+  {
+    "id": 6,
+    "image": parrot12,
+    "price": 3499,
+    "name": "Blue and Gold Macaw",
+    "breed": "Macaw",
+    "scientificName": "Ara ararauna",
+    "description": "The Blue and Gold Macaw is one of the most popular large parrots, known for its stunning blue and yellow plumage. They are highly social, intelligent, and can be excellent talkers.",
+    "age": {
+      "value": 1,
+      "unit": "year"
+    },
+    "gender": "Unsexed",
+    "color": "Blue and yellow",
+    "size": "76-86 cm",
+    "weight": "900-1500g",
+    "diet": "Nuts, seeds, fruits, and vegetables",
+    "lifespan": "30-50 years",
+    "temperament": "Playful, social, intelligent",
+    "location": "Germany, Bavaria",
+    "breeder": "Bavarian Bird Haven",
+    "inStock": true,
+    "rating": 4.7,
+    "reviews": 176,
+    "skills": ["Talking", "Tricks", "Flying"]
+  },
+  {
+    "id": 7,
+    "image": parrot18,
+    "price": 2899,
+    "name": "Umbrella Cockatoo",
+    "breed": "Cockatoo",
+    "scientificName": "Cacatua alba",
+    "description": "The Umbrella Cockatoo is a medium-sized all-white cockatoo with a large, expressive crest. They are known for their affectionate nature and strong bond with their owners. These birds are highly social and require lots of attention.",
+    "age": {
+      "value": 3,
+      "unit": "months"
+    },
+    "gender": "Unsexed",
+    "color": "White with yellow under wings",
+    "size": "45-50 cm",
+    "weight": "400-800g",
+    "diet": "Pellets, fresh fruits, vegetables, and nuts",
+    "lifespan": "40-60 years",
+    "temperament": "Affectionate, playful, demanding",
+    "location": "Italy, Lombardy",
+    "breeder": "Mediterranean Aviary",
+    "inStock": true,
+    "rating": 4.5,
+    "reviews": 92,
+    "skills": ["Cuddling", "Talking", "Dancing"]
+  },
+  {
+    "id": 8,
+    "image": parrot22,
+    "price": 3299,
+    "name": "Military Macaw",
+    "breed": "Macaw",
+    "scientificName": "Ara militaris",
+    "description": "The Military Macaw is a large, mostly green macaw with a red forehead and blue flight feathers. They are known for their gentle nature and excellent talking ability. These birds are highly intelligent and form strong bonds with their owners.",
+    "age": {
+      "value": 6,
+      "unit": "months"
+    },
+    "gender": "Male",
+    "color": "Green with red and blue accents",
+    "size": "70-80 cm",
+    "weight": "900-1100g",
+    "diet": "Nuts, seeds, fruits, and vegetables",
+    "lifespan": "50-60 years",
+    "temperament": "Gentle, intelligent, social",
+    "location": "Spain, Catalonia",
+    "breeder": "Iberian Parrot House",
+    "inStock": true,
+    "rating": 4.6,
+    "reviews": 78,
+    "skills": ["Talking", "Tricks", "Mimicry"]
+  },
+  {
+    "id": 9,
+    "image": parrot27,
+    "price": 3499,
+    "name": "Goffin's Cockatoo",
+    "breed": "Cockatoo",
+    "scientificName": "Cacatua goffiniana",
+    "description": "Goffin's Cockatoo is a smaller, intelligent cockatoo species known for their playful and curious nature. They are excellent problem solvers and require lots of mental stimulation. These birds are known for their clownish behavior and ability to learn tricks.",
+    "age": {
+      "value": 9,
+      "unit": "months"
+    },
+    "gender": "Female",
+    "color": "White with salmon-pink feathers",
+    "size": "30-35 cm",
+    "weight": "250-400g",
+    "diet": "Pellets, fresh fruits, vegetables, and seeds",
+    "lifespan": "30-40 years",
+    "temperament": "Playful, intelligent, active",
+    "location": "Japan, Tokyo",
+    "breeder": "Sakura Aviary",
+    "inStock": true,
+    "rating": 4.7,
+    "reviews": 105,
+    "skills": ["Problem Solving", "Tricks", "Mimicry"]
+  },
+  {
+    "id": 10,
+    "image": parrot16,
+    "price": 3999,
+    "name": "Hyacinth Macaw",
+    "breed": "Macaw",
+    "scientificName": "Anodorhynchus hyacinthinus",
+    "description": "The Hyacinth Macaw is the largest of all parrots, known for its stunning cobalt-blue plumage and yellow eye rings. These gentle giants are highly intelligent and have a calm, gentle nature. They require lots of space and mental stimulation.",
+    "age": {
+      "value": 5,
+      "unit": "months"
+    },
+    "gender": "Unsexed",
+    "color": "Cobalt blue with yellow eye rings",
+    "size": "95-100 cm",
+    "weight": "1.2-1.7 kg",
+    "diet": "Specialized macaw pellets, nuts, and fresh produce",
+    "lifespan": "50+ years",
+    "temperament": "Gentle, intelligent, affectionate",
+    "location": "Brazil, Sao Paulo",
+    "breeder": "Amazonia Aviary",
+    "inStock": true,
+    "rating": 4.9,
+    "reviews": 68,
+    "skills": ["Talking", "Tricks", "Problem Solving"]
+  },
+  {
+    "id": 11,
+    "image": parrot17,
+    "price": 2799,
+    "name": "Timneh African Grey",
+    "breed": "African Grey",
+    "scientificName": "Psittacus timneh",
+    "description": "The Timneh African Grey is a smaller, slightly darker version of the Congo African Grey, known for its exceptional intelligence and talking ability. They tend to be more laid-back than their Congo counterparts and are excellent at mimicking sounds and speech.",
+    "age": {
+      "value": 3,
+      "unit": "months"
+    },
+    "gender": "Female",
+    "color": "Charcoal grey with maroon tail",
+    "size": "28-33 cm",
+    "weight": "275-375g",
+    "diet": "Pellets, vegetables, fruits, and nuts",
+    "lifespan": "40-50 years",
+    "temperament": "Intelligent, social, sensitive",
+    "location": "Mexico, Mexico City",
+    "breeder": "Aztec Aviary",
+    "inStock": true,
+    "rating": 4.8,
+    "reviews": 134,
+    "skills": ["Advanced Talking", "Problem Solving", "Mimicry"]
+  },
+  {
+    "id": 12,
+    "image": parrot26,
+    "price": 3199,
+    "name": "Major Mitchell's Cockatoo",
+    "breed": "Cockatoo",
+    "scientificName": "Lophochroa leadbeateri",
+    "description": "Major Mitchell's Cockatoo is one of the most beautiful cockatoo species, known for its stunning pink and white plumage with a vibrant red and yellow crest. They are intelligent, playful, and have a more independent nature compared to other cockatoos.",
+    "age": {
+      "value": 8,
+      "unit": "months"
+    },
+    "gender": "Male",
+    "color": "Pink and white with multicolored crest",
+    "size": "35-40 cm",
+    "weight": "300-500g",
+    "diet": "Specialized cockatoo pellets, seeds, nuts, and fresh produce",
+    "lifespan": "40-60 years",
+    "temperament": "Playful, intelligent, independent",
+    "location": "China, Beijing",
+    "breeder": "Oriental Bird Paradise",
+    "inStock": true,
+    "rating": 4.8,
+    "reviews": 89,
+    "skills": ["Talking", "Tricks", "Mimicry"]
   },
   {
     "id": 13,
     "image": parrot20,
-    "price": 5319,
-    "name": "African Grey Parrot",
+    "price": 2699,
+    "name": "Congo African Grey",
+    "breed": "African Grey",
+    "scientificName": "Psittacus erithacus",
+    "description": "The Congo African Grey is renowned for its exceptional intelligence and ability to mimic human speech with remarkable accuracy. These birds require significant mental stimulation and social interaction. They are considered one of the most intelligent bird species.",
     "age": {
-      "value": 12,
-      "unit": "weeks"
+      "value": 3,
+      "unit": "months"
     },
-    "location": "India,  Delhi, Street: 111 Strawberry St"
+    "gender": "Unsexed",
+    "color": "Grey with red tail",
+    "size": "33-40 cm",
+    "weight": "400-650g",
+    "diet": "Pellets, fruits, vegetables, and nuts",
+    "lifespan": "40-60 years",
+    "temperament": "Intelligent, sensitive, social",
+    "location": "India, Delhi",
+    "breeder": "Himalayan Aviary",
+    "inStock": true,
+    "rating": 4.9,
+    "reviews": 203,
+    "skills": ["Advanced Talking", "Puzzle Solving", "Mimicry"]
   },
   {
     "id": 14,
     "image": parrot44,
-    "price": 4762,
-    "name": "African Grey Parrot",
+    "price": 2899,
+    "name": "Timneh African Grey",
+    "breed": "African Grey",
+    "scientificName": "Psittacus timneh",
+    "description": "The Timneh African Grey is a smaller, slightly darker variant of the African Grey, known for its exceptional intelligence and talking ability. They tend to be more laid-back than their Congo counterparts and are excellent at mimicking sounds and speech.",
     "age": {
-      "value": 20,
-      "unit": "days"
+      "value": 3,
+      "unit": "weeks"
     },
-    "location": "South Africa,  Gauteng, Street: 222 Mango St"
+    "gender": "Unsexed",
+    "color": "Charcoal grey with maroon tail",
+    "size": "28-33 cm",
+    "weight": "275-375g",
+    "diet": "Pellets, vegetables, fruits, and nuts",
+    "lifespan": "40-50 years",
+    "temperament": "Intelligent, social, sensitive",
+    "location": "South Africa, Gauteng",
+    "breeder": "African Bird Sanctuary",
+    "inStock": true,
+    "rating": 4.8,
+    "reviews": 156,
+    "skills": ["Talking", "Problem Solving", "Mimicry"]
   },
   {
     "id": 15,
     "image": parrot42,
-    "price": 5091,
-    "name": "Cockatoo Parrot",
+    "price": 3699,
+    "name": "Palm Cockatoo",
+    "breed": "Cockatoo",
+    "scientificName": "Probosciger aterrimus",
+    "description": "The Palm Cockatoo is a striking, large black cockatoo with distinctive red cheek patches and a powerful beak. They are known for their unique drumming behavior, where they use tools to create rhythmic sounds. These intelligent birds require experienced owners.",
     "age": {
       "value": 17,
       "unit": "months"
     },
-    "location": "Argentina,  Buenos Aires, Street: 333 Banana St"
+    "gender": "Male",
+    "color": "Black with red cheek patches",
+    "size": "55-60 cm",
+    "weight": "900-1200g",
+    "diet": "Specialized palm nuts, seeds, and fruits",
+    "lifespan": "40-60 years",
+    "temperament": "Intelligent, independent, vocal",
+    "location": "Argentina, Buenos Aires",
+    "breeder": "Pampas Aviary",
+    "inStock": true,
+    "rating": 4.7,
+    "reviews": 42,
+    "skills": ["Drumming", "Vocalizations", "Tool Use"]
   },
   {
     "id": 16,
     "image": parrot35,
-    "price": 5360,
-    "name": "Macaw Parrot",
+    "price": 4299,
+    "name": "Green-winged Macaw",
+    "breed": "Macaw",
+    "scientificName": "Ara chloropterus",
+    "description": "The Green-winged Macaw is one of the largest macaws, known for its vibrant red plumage with green and blue wing feathers. They are gentle giants with a calm temperament, making them excellent companions. These birds are highly social and form strong bonds with their owners.",
     "age": {
-      "value": 1,
-      "unit": "weeks"
+      "value": 4,
+      "unit": "months"
     },
-    "location": "Russia,  Moscow, Street: 444 Papaya St"
+    "gender": "Unsexed",
+    "color": "Red with green and blue wings",
+    "size": "90-100 cm",
+    "weight": "1.2-1.7 kg",
+    "diet": "Specialized macaw pellets, nuts, and fresh produce",
+    "lifespan": "50+ years",
+    "temperament": "Gentle, affectionate, social",
+    "location": "Russia, Moscow",
+    "breeder": "Siberian Aviary",
+    "inStock": true,
+    "rating": 4.8,
+    "reviews": 67,
+    "skills": ["Talking", "Tricks", "Cuddling"]
   },
   {
     "id": 17,
     "image": parrot30,
-    "price": 5534,
-    "name": "Macaw Parrot",
+    "price": 3899,
+    "name": "Scarlet Macaw",
+    "breed": "Macaw",
+    "scientificName": "Ara macao",
+    "description": "The Scarlet Macaw is one of the most colorful and recognizable parrots in the world, with vibrant red, blue, and yellow plumage. They are highly intelligent, social birds that thrive on interaction and mental stimulation. These birds are known for their loud calls and impressive flying skills.",
     "age": {
       "value": 10,
       "unit": "weeks"
     },
-    "location": "Egypt,  Cairo, Street: 555 Kiwi St"
+    "gender": "Female",
+    "color": "Red, blue, and yellow",
+    "size": "81-96 cm",
+    "weight": "900-1490g",
+    "diet": "Nuts, seeds, fruits, and vegetables",
+    "lifespan": "40-50 years",
+    "temperament": "Playful, social, intelligent",
+    "location": "Egypt, Cairo",
+    "breeder": "Nile Aviary",
+    "inStock": true,
+    "rating": 4.9,
+    "reviews": 184,
+    "skills": ["Talking", "Tricks", "Flying"]
   },
   {
     "id": 18,
     "image": parrot40,
-    "price": 5415,
-    "name": "African Grey Parrot",
+    "price": 2799,
+    "name": "Congo African Grey",
+    "breed": "African Grey",
+    "scientificName": "Psittacus erithacus",
+    "description": "The Congo African Grey is widely regarded as one of the most intelligent bird species, known for their exceptional ability to mimic human speech and understand complex concepts. These birds require significant mental stimulation and social interaction to thrive.",
     "age": {
-      "value": 2,
-      "unit": "weeks"
+      "value": 4,
+      "unit": "months"
     },
-    "location": "Turkey,  Istanbul, Street: 666 Pineapple St"
+    "gender": "Unsexed",
+    "color": "Grey with red tail",
+    "size": "33-40 cm",
+    "weight": "400-650g",
+    "diet": "Pellets, fruits, vegetables, and nuts",
+    "lifespan": "40-60 years",
+    "temperament": "Intelligent, sensitive, social",
+    "location": "Australia, Victoria",
+    "breeder": "Outback Aviary",
+    "inStock": true,
+    "rating": 4.9,
+    "reviews": 198,
+    "skills": ["Advanced Talking", "Puzzle Solving", "Mimicry"]
   },
   {
     "id": 19,
     "image": parrot32,
-    "price": 5135,
-    "name": "African Grey Parrot",
+    "price": 2899,
+    "name": "Congo African Grey",
+    "breed": "African Grey",
+    "scientificName": "Psittacus erithacus",
+    "description": "The Congo African Grey is one of the most intelligent bird species, capable of understanding and using human language in context. These birds form strong bonds with their owners and require daily mental stimulation to prevent boredom and behavioral issues.",
     "age": {
-      "value": 2,
-      "unit": "days"
+      "value": 5,
+      "unit": "months"
     },
-    "location": "Cameroon Yaounde Mbimancy",
+    "gender": "Unsexed",
+    "color": "Grey with red tail",
+    "size": "33-40 cm",
+    "weight": "400-650g",
+    "diet": "Pellets, fruits, vegetables, and nuts",
+    "lifespan": "40-60 years",
+    "temperament": "Intelligent, sensitive, social",
+    "location": "Cameroon, Yaounde",
+    "breeder": "African Rainforest Aviary",
+    "inStock": true,
+    "rating": 4.9,
+    "reviews": 212,
+    "skills": ["Advanced Talking", "Puzzle Solving", "Mimicry"]
   },
   {
     "id": 20,
     "image": parrot40,
-    "price": 5415,
-    "name": "African Grey Parrot",
+    "price": 2699,
+    "name": "Timneh African Grey",
+    "breed": "African Grey",
+    "scientificName": "Psittacus timneh",
+    "description": "The Timneh African Grey is a slightly smaller and darker variant of the African Grey, known for its exceptional intelligence and talking ability. They are often more confident and less prone to feather plucking than their Congo counterparts.",
     "age": {
-      "value": 2,
-      "unit": "weeks"
+      "value": 4,
+      "unit": "months"
     },
-    "location": "Cameroon,  IDouala, Ange Rapaheal"
-  },
+    "gender": "Unsexed",
+    "color": "Charcoal grey with maroon tail",
+    "size": "28-33 cm",
+    "weight": "275-375g",
+    "diet": "Pellets, vegetables, fruits, and nuts",
+    "lifespan": "40-50 years",
+    "temperament": "Intelligent, social, sensitive",
+    "location": "Cameroon, Douala",
+    "breeder": "Central African Aviary",
+    "inStock": true,
+    "rating": 4.8,
+    "reviews": 145,
+    "skills": ["Talking", "Problem Solving", "Mimicry"]
+  }
 ]
